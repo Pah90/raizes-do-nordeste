@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carrinho | Raízes do Nordeste</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:#F4E7D3;
+font-family:'Poppins',sans-serif;
+}
+
+.carrinho{
+max-width:800px;
+margin:80px auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.carrinho h2{
+text-align:center;
+font-size:50px;
+color:#5C2E16;
+font-family:'Berkshire Swash', cursive;
+margin-bottom:30px;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+padding:15px 0;
+border-bottom:1px solid #ddd;
+font-size:18px;
+}
+
+.total{
+margin-top:30px;
+text-align:right;
+font-size:28px;
+font-weight:bold;
+color:#A84300;
+}
+
+.botao-finalizar{
+display:block;
+width:100%;
+margin-top:30px;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#A84300;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.botao-finalizar:hover{
+opacity:0.9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌵 Raízes do Nordeste</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="historia.html">Nossa História</a>
+<a href="carrinho.html">🛒 Carrinho</a>
+<a href="contato.html">Contato</a>
+</nav>
+
+</header>
+
+<section class="carrinho">
+
+<h2>Meu Carrinho</h2>
+
+<div class="item">
+<span>Cuscuz Nordestino</span>
+<span>R$ 24,90</span>
+</div>
+
+<div class="item">
+<span>Café Regional da Casa</span>
+<span>R$ 29,90</span>
+</div>
+
+<div class="total">
+Total: R$ 54,80
+</div>
+
+<button class="botao-finalizar" onclick="window.location.href='pagamento.html'">
+Finalizar Pedido
+</button>
+
+</section>
+
+<script>
+
+const produtos =
+JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const lista =
+document.getElementById("lista-carrinho");
+
+let total = 0;
+
+produtos.forEach(produto => {
+
+    const item =
+    document.createElement("div");
+
+    item.className = "item";
+
+    item.innerHTML = `
+        <span>${produto}</span>
+        <span>R$ 10,00</span>
+    `;
+
+    lista.appendChild(item);
+
+    total += 10;
+
+});
+
+document.getElementById("total-carrinho")
+.innerHTML = `Total: R$ ${total},00`;
+
+</script>
+
+
+</body>
+
+</html>

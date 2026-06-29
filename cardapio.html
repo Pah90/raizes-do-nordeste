@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cardápio | Raízes do Nordeste</title>
+
+  <link rel="stylesheet" href="css/cardapio.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+
+    <h1>🌵 Raízes do Nordeste</h1>
+
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="cardapio.html">Cardápio</a>
+  <a href="historia.html">Nossa História</a>
+  <a href="contato.html">Contato</a>
+<div class="carrinho-hover">
+
+  <a href="carrinho.html" class="icone-carrinho">
+    🛒 <span id="contador-carrinho">0</span>
+  </a>
+  <div style="background:red;color:white;padding:10px;">
+TESTE
+</div>
+
+  <div class="mini-carrinho">
+
+    <h4>Seu Carrinho</h4>
+
+    <p>Clique para visualizar os itens</p>
+
+    <a href="carrinho.html" class="btn-mini">
+      Ver Carrinho
+    </a>
+
+  </div>
+
+</div>
+</nav>
+  </header>
+
+  <section class="titulo-cardapio">
+
+    <h2>Nosso Cardápio</h2>
+
+    <p>
+      Sabores tradicionais preparados com ingredientes regionais e muito carinho.
+    </p>
+
+  </section>
+
+  <section class="categoria">
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="selo favorito">
+          🔥 Favorito da Casa
+        </div>
+
+        <img src="imagens/cuzcuz.jpg">
+
+        <h3>Cuscuz Nordestino</h3>
+
+        <p>
+          Cuscuz artesanal acompanhado de queijo coalho e manteiga da terra.
+        </p>
+
+        <span>R$ 24,90</span>
+
+      <button onclick="adicionarCarrinho('Cuscuz Nordestino')">
+        Pedir Agora
+      </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/tapioca.jpg">
+
+        <h3>Tapioca Regional</h3>
+
+        <p>
+          Tapioca artesanal recheada com sabores típicos do Nordeste.
+        </p>
+
+        <span>R$ 19,90</span>
+
+        <button onclick="adicionarCarrinho('Tapioca Regional')">
+         Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <div class="selo mais-pedido">
+          ⭐ Mais Pedido
+        </div>
+
+        <img src="imagens/cafe.png">
+
+        <h3>Café Regional da Casa</h3>
+
+        <p>
+          Café da manhã completo com café fresco, cuscuz artesanal e bolo regional.
+        </p>
+
+        <span>R$ 29,90</span>
+
+        <button onclick="adicionarCarrinho('Café Regional da Casa')">
+         Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/macaxeira.jpg.png">
+
+        <h3>Macaxeira Cremosa</h3>
+
+        <p>
+          Macaxeira cozida servida com queijo coalho dourado e manteiga da terra.
+        </p>
+
+        <span>R$ 22,90</span>
+
+        <button onclick="adicionarCarrinho('Macaxeira Cremosa')">
+         Pedir Agora
+       </button>
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/bolo.jpg">
+
+        <h3>Bolo de Macaxeira</h3>
+
+        <p>
+          Bolo artesanal de aipim com coco fresco e café coado.
+        </p>
+
+        <span>R$ 18,90</span>
+
+        <button onclick="adicionarCarrinho('Bolo de Macaxeira')">
+        Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/queijo.jpg">
+
+        <h3>Queijo Coalho na Chapa</h3>
+
+        <p>
+          Queijo coalho grelhado servido com mel de engenho.
+        </p>
+
+        <span>R$ 16,90</span>
+
+        <button onclick="adicionarCarrinho('Queijo Coalho na Chapa')">
+          Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/cuscuzdoce.jpg.webp">
+
+        <h3>Cuscuz Doce</h3>
+
+        <p>
+          Cuscuz doce com banana, coco fresco e canela.
+        </p>
+
+        <span>R$ 17,90</span>
+
+        <button onclick="adicionarCarrinho('Cuscuz Doce')">
+        Pedir Agora
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="titulo-bebidas">
+
+    <h2>Bebidas</h2>
+
+  </section>
+
+  <section class="categoria">
+
+    <div class="cards">
+
+      <div class="card">
+
+        <img src="imagens/cafecomrapadura.jpg">
+
+        <h3>Café com Rapadura</h3>
+
+        <p>
+          Café coado servido com rapadura artesanal.
+        </p>
+
+        <span>R$ 9,90</span>
+
+        <button onclick="adicionarCarrinho('Café com Rapadura')">
+         Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/caja.jpg">
+
+        <h3>Suco de Cajá</h3>
+
+        <p>
+          Suco natural regional servido gelado.
+        </p>
+
+        <span>R$ 12,90</span>
+
+        <button onclick="adicionarCarrinho('Suco de Cajá')">
+         Pedir Agora
+         </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/coco.jpg.png">
+
+        <h3>Água de Coco</h3>
+
+        <p>
+          Água de coco natural e refrescante.
+        </p>
+
+        <span>R$ 10,90</span>
+
+        <button onclick="adicionarCarrinho('Água de Coco')">
+         Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/refrigerante.jpg.png">
+
+        <h3>Refrigerante</h3>
+
+        <p>
+          Refrigerante lata 350ml.
+        </p>
+
+        <span>R$ 7,90</span>
+
+        <button onclick="adicionarCarrinho('Refrigerante')">
+         Pedir Agora
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <img src="imagens/agua.jpg.png">
+
+        <h3>Água Mineral</h3>
+
+        <p>
+          Água mineral gelada sem gás.
+        </p>
+
+        <span>R$ 5,90</span>
+
+       <button onclick="adicionarCarrinho('Água Mineral')">
+        Pedir Agora
+       </button>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+  <div id="mensagem-carrinho" class="mensagem-carrinho">
+  Item adicionado ao carrinho!
+</div>
+
+<script src="js/app.js"></script>
+</body>
+
+</html>
